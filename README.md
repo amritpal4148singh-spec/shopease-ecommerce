@@ -338,12 +338,6 @@ Then open:
 http://localhost:8000
 🌐 Deployment
 
-## 🔗 Live Demo
-
-🌐 **[Visit ShopEase Live Demo](https://amritpal4148singh-spec.github.io/shopease-ecommerce/)**
-
-💻 **[View Source Code](https://github.com/amritpal4148singh-spec/shopease-ecommerce)**
-
 ShopEase is a static frontend application and can be deployed on static hosting platforms.
 
 Possible platforms include:
@@ -367,6 +361,14 @@ GitHub will generate the live website URL.
 The URL will follow this format:
 
 https://<username>.github.io/<repository-name>/
+---
+
+## 🔗 Live Demo
+
+🌐 **[Visit ShopEase Live Demo](https://amritpal4148singh-spec.github.io/shopease-ecommerce/)**
+
+💻 **[View Source Code](https://github.com/amritpal4148singh-spec/shopease-ecommerce/)**
+---
 ⚠️ Known Limitations
 
 ShopEase is a frontend-only learning project and is not production-ready.
