@@ -541,36 +541,6 @@ ShopEase is maintained as a **portfolio and learning project** rather than a pro
 
 ---
 
-## 📸 Screenshots
-
-Screenshots can be added here to showcase the main interfaces of the project.
-
-### 🏠 Homepage
-
-_Add screenshot here_
-
-### 🛍️ Product Catalog
-
-_Add screenshot here_
-
-### 📦 Product Details
-
-_Add screenshot here_
-
-### 🛒 Shopping Cart
-
-_Add screenshot here_
-
-### 💳 Checkout
-
-_Add screenshot here_
-
-### 📦 Orders & Tracking
-
-_Add screenshot here_
-
----
-
 ## 🔮 Future Improvements
 
 Possible improvements for a production-style version include:
