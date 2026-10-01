@@ -1,39 +1,41 @@
-# 🛍️ ShopEase — E-Commerce Website
+# 🛍️ ShopEase
 
-A frontend-only e-commerce website built using **HTML5, CSS3, and Vanilla JavaScript**.
+A frontend-only e-commerce demo built with **HTML, CSS, and Vanilla JavaScript** — no frameworks, no backend, and no build step.
 
-ShopEase is a learning and portfolio project created to practice real-world frontend development concepts such as API integration, dynamic product rendering, URL-based filtering, LocalStorage state management, form validation, authentication flows, shopping cart functionality, wishlist management, checkout, and simulated order tracking.
+ShopEase was built as a learning and portfolio project to practice real-world frontend development patterns such as fetching and rendering data, URL-based filtering, LocalStorage-backed state, form validation, authentication flows, and a complete simulated shopping experience from browsing products to order tracking.
 
-> ⚠️ **ShopEase is a demo project, not a real online store.** No real payments are processed, no real emails are sent, and user accounts are stored only in the browser.
+> ⚠️ **This is a demo, not a real store.** No real payments are processed, no real emails are sent, and user accounts exist only inside the browser.
 
 ---
 
 ## ✨ Features
 
 ### 🏠 Homepage
-- Responsive navigation
+
 - Featured products
 - New arrivals
 - Product categories
+- Responsive navigation
 - Product cards
-- Search functionality
+- Header search
 - Responsive layout
 
 ### 🛍️ Product Catalog
+
 - Browse all products
 - Search products
 - Category filtering
 - Price filtering
-- Product sorting
-- Sort by:
+- Sorting by:
   - Price
   - Rating
   - Name
-- URL-based filter parameters
-- Bookmarkable and shareable filtered views
+- Filters synchronized with the URL
+- Filtered pages can be bookmarked and shared
 
 ### 📦 Product Details
-- Detailed product information
+
+- Product information
 - Product image
 - Price and rating
 - Quantity selector
@@ -42,25 +44,28 @@ ShopEase is a learning and portfolio project created to practice real-world fron
 - Add to Wishlist
 
 ### 🛒 Shopping Cart
+
 - Add products to cart
 - Remove products
 - Increase/decrease quantity
 - Quantity limit from 1–10
-- Automatic line-item subtotal
+- Line-item subtotals
 - Automatic total calculation
-- Demo shipping calculation
+- Demo shipping rule
 - Free shipping above $100
 - $10 shipping below $100
 - Cart persistence using LocalStorage
 
 ### ❤️ Wishlist
+
 - Add/remove products
 - Dedicated wishlist page
-- Move product to cart
+- Move products to cart
 - Wishlist works independently from the cart
 - Wishlist persistence using LocalStorage
 
 ### 💳 Checkout
+
 - Customer information
 - Shipping address
 - Form validation
@@ -73,13 +78,15 @@ ShopEase is a learning and portfolio project created to practice real-world fron
 > All payment methods are demo interfaces. No real payment is processed.
 
 ### 📦 Orders & Tracking
+
 - Order confirmation
 - Order history
 - Order details
 - Order tracking timeline
-- Order cancellation before shipping
+- Demo order cancellation before shipping
 - Orders associated with the logged-in account
-- Five-stage simulated order tracking:
+
+The simulated tracking flow contains five stages:
 
 ```text
 Order Placed
@@ -91,57 +98,70 @@ Shipped
 Out for Delivery
       ↓
 Delivered
-👤 Authentication
-User signup
-User login
-Logout
-User profile
-Protected pages
-Session management
-Demo password hashing using Web Crypto API
+```
+
+### 👤 Authentication
+
+- User signup
+- User login
+- Logout
+- User profile
+- Session management
+- Protected pages
+- Demo password hashing using the Web Crypto API
 
 Protected pages include:
 
-Checkout
-Orders
-Order Details
-Profile
-🛠️ Technologies Used
-Technology	Purpose
-HTML5	Page structure and semantic markup
-CSS3	Styling and responsive design
-JavaScript ES6+	Application logic and interactivity
-Fake Store API	Product data
-LocalStorage	Cart, wishlist, users and orders
-SessionStorage	Temporary session/product data
-Web Crypto API	Demo password hashing
-Google Fonts	Fraunces and Inter fonts
-No Frameworks
+- Checkout
+- Orders
+- Order Details
+- Profile
 
-This project intentionally uses Vanilla JavaScript without frontend frameworks.
+---
 
-❌ React
-❌ Angular
-❌ Vue
-❌ Bootstrap
-❌ Tailwind
-❌ jQuery
-❌ Build tools
-❌ Bundlers
-❌ npm dependencies
+## 🛠️ Technologies Used
 
-Everything is built using plain:
+| Technology | Purpose |
+|------------|---------|
+| **HTML5** | Website structure and semantic markup |
+| **CSS3** | Styling, responsive design, Grid and Flexbox |
+| **Vanilla JavaScript** | Application logic and interactivity |
+| **Fake Store API** | Product data |
+| **LocalStorage** | Cart, wishlist, accounts and orders |
+| **SessionStorage** | Temporary session/product data |
+| **Web Crypto API** | Demo password hashing |
+| **Google Fonts** | Fraunces and Inter |
 
-HTML + CSS + JavaScript
+### No Frameworks
 
-📂 Project Structure
+This project intentionally uses plain HTML, CSS and JavaScript.
+
+- ❌ React
+- ❌ Angular
+- ❌ Vue
+- ❌ Bootstrap
+- ❌ Tailwind
+- ❌ jQuery
+- ❌ Build tools
+- ❌ Bundlers
+- ❌ npm dependencies
+
+Everything is built using:
+
+**HTML + CSS + Vanilla JavaScript**
+
+---
+
+## 📂 Project Structure
+
+```text
 ShopEase/
 │
 ├── assets/
 │   └── images/
-│       ├── homepage images
-│       ├── category images
-│       └── local product images
+│       ├── Homepage images
+│       ├── Category images
+│       └── Local product images
 │
 ├── css/
 │   ├── style.css
@@ -190,52 +210,47 @@ ShopEase/
 ├── profile.html
 │
 └── README.md
-🔄 Application Flow
-                    ┌─────────────────┐
-                    │     Homepage    │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │ Product Catalog │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │ Product Details │
-                    └───────┬─┬───────┘
-                            │ │
-                ┌───────────┘ └───────────┐
-                ▼                         ▼
-        ┌──────────────┐          ┌──────────────┐
-        │     Cart     │          │   Wishlist   │
-        └──────┬───────┘          └──────────────┘
-               │
-               ▼
-        ┌──────────────┐
-        │   Checkout   │
-        └──────┬───────┘
-               │
-               ▼
-        ┌──────────────┐
-        │Order Success │
-        └──────┬───────┘
-               │
-               ▼
-        ┌──────────────┐
-        │  My Orders   │
-        └──────┬───────┘
-               │
-               ▼
-        ┌────────────────────┐
-        │ Order Details &    │
-        │     Tracking       │
-        └────────────────────┘
-🧩 JavaScript Architecture
+```
+
+---
+
+## 🔄 Application Flow
+
+```text
+Homepage
+   │
+   ▼
+Product Catalog
+   │
+   ▼
+Product Details
+   │
+   ├───────────────┐
+   ▼               ▼
+Cart           Wishlist
+   │
+   ▼
+Checkout
+   │
+   ▼
+Order Confirmation
+   │
+   ▼
+My Orders
+   │
+   ▼
+Order Details & Tracking
+```
+
+---
+
+## 🧩 JavaScript Architecture
 
 The project separates shared functionality from page-specific functionality.
 
-Shared JavaScript Files
+### Shared JavaScript Files
+
+```text
 app.js
    │
    ├── Product fetching
@@ -257,110 +272,119 @@ wishlist-utils.js
           ▼
 auth-utils.js
    │
-   └── Users, sessions and authentication
+   └── Accounts, sessions and page protection
           │
           ▼
 orders-utils.js
    │
-   └── Orders, tracking and cancellation
+   └── Order history, tracking and cancellation
+```
 
 Page-specific JavaScript files are loaded after the shared utilities they depend on.
 
-💾 Browser Storage
+---
+
+## 💾 Browser Storage
 
 ShopEase uses browser storage instead of a backend database.
 
-Cart
+### Cart
+
+```text
 shopease_cart
+```
 
 Stores cart products and quantities.
 
-Wishlist
+### Wishlist
+
+```text
 shopease_wishlist
+```
 
 Stores wishlist products.
 
-Users
+### Users
+
+```text
 shopease_users
+```
 
 Stores demo user account information.
 
-Session
+### Session
+
+```text
 shopease_session
+```
 
 Stores the current browser session.
 
-Orders
+### Orders
+
+```text
 shopease_orders
+```
 
 Stores demo order history.
 
-Last Order
+### Last Order
+
+```text
 shopease_last_order
+```
 
 Stores the most recently created order.
 
-🌐 API Integration
+---
 
-Product data is fetched from the Fake Store API.
+## 🌐 API Integration
+
+Product data is fetched from the **Fake Store API**.
+
+**API Endpoint:**
 
 https://fakestoreapi.com/products
 
 The API provides product information such as:
 
-Product name
-Price
-Description
-Category
-Rating
-Product image
+- Product name
+- Price
+- Description
+- Category
+- Rating
+- Product image
 
 The project also contains local images/data for selected homepage, category and footwear content.
 
-🚀 Running the Project Locally
+---
+
+## 🚀 Running the Project Locally
 
 ShopEase does not require npm, dependencies, or a build process.
 
-Option 1 — VS Code Live Server
-Open the project in VS Code.
-Install the Live Server extension.
-Right-click index.html.
-Select Open with Live Server.
-The website will open in your browser.
-Option 2 — Python HTTP Server
+### Option 1 — VS Code Live Server
+
+1. Open the project in VS Code.
+2. Install the **Live Server** extension.
+3. Right-click `index.html`.
+4. Select **Open with Live Server**.
+5. The website will open in your browser.
+
+### Option 2 — Python HTTP Server
 
 Open a terminal inside the project folder:
 
+```bash
 python -m http.server 8000
+```
 
 Then open:
 
+```text
 http://localhost:8000
-🌐 Deployment
+```
 
-ShopEase is a static frontend application and can be deployed on static hosting platforms.
-
-Possible platforms include:
-
-GitHub Pages
-Netlify
-Vercel
-Other static hosting services
-GitHub Pages
-
-To deploy using GitHub Pages:
-
-Open the repository on GitHub.
-Go to Settings.
-Open Pages.
-Select the main branch.
-Select the /root folder.
-Save the settings.
-GitHub will generate the live website URL.
-
-The URL will follow this format:
-
-https://<username>.github.io/<repository-name>/
 ---
 
 ## 🔗 Live Demo
@@ -368,142 +392,222 @@ https://<username>.github.io/<repository-name>/
 🌐 **[Visit ShopEase Live Demo](https://amritpal4148singh-spec.github.io/shopease-ecommerce/)**
 
 💻 **[View Source Code](https://github.com/amritpal4148singh-spec/shopease-ecommerce/)**
+
 ---
-⚠️ Known Limitations
 
-ShopEase is a frontend-only learning project and is not production-ready.
+## 🌐 Deployment
 
-🔐 Authentication
+ShopEase is a static frontend application and can be deployed using static hosting platforms.
+
+### GitHub Pages
+
+1. Push the project to a GitHub repository.
+2. Open **Settings → Pages**.
+3. Select **Deploy from a branch**.
+4. Select the `main` branch.
+5. Select the `/root` folder.
+6. Save the settings.
+7. GitHub will generate the live website URL.
+
+The URL follows this format:
+
+```text
+https://<username>.github.io/<repository-name>/
+```
+
+### Other Hosting Options
+
+ShopEase can also be deployed using:
+
+- Netlify
+- Vercel
+- Other static hosting platforms
+
+No backend configuration or build command is required.
+
+---
+
+## ⚠️ Known Limitations
+
+ShopEase is a **frontend-only learning project** and is not production-ready.
+
+### 🔐 Authentication
 
 Authentication is simulated using browser storage.
 
 Passwords are processed using the browser's Web Crypto API with SHA-256 hashing and a random per-account salt.
 
-However, this is not suitable for production authentication because:
+However, this is **not suitable for production authentication** because:
 
-There is no backend authentication.
-There is no server-side session management.
-There is no rate limiting.
-LocalStorage can be accessed from the browser.
-Accounts do not synchronize between devices.
-There is no production database.
+- There is no backend authentication.
+- There is no server-side session management.
+- There is no rate limiting.
+- LocalStorage can be accessed from the browser.
+- Accounts do not synchronize between devices.
+- There is no production database.
 
-Do not use real passwords while testing this project.
+> **Do not use real passwords while testing this project.**
 
-💳 Payments
+### 💳 Payments
 
-Payment functionality is simulated.
+Checkout is completely simulated.
 
-The following options are only demo interfaces:
+The following options are demo interfaces:
 
-Cash on Delivery
-UPI
-Card
+- Cash on Delivery
+- UPI
+- Card
 
 No real payment gateway is connected.
 
 No real money is transferred.
 
-📦 Orders
+### 📦 Orders
 
 Orders are stored locally in the browser.
 
 There is:
 
-No backend database
-No real order processing
-No real delivery service
-No email notification system
-🚚 Order Tracking
+- No backend database
+- No real order processing
+- No real delivery service
+- No email notification system
+
+### 🚚 Order Tracking
 
 Order tracking is simulated.
 
-The project does not communicate with a real courier or delivery service.
+There is no real courier or delivery API integration.
 
-The tracking timeline is only intended to demonstrate how a real order-tracking interface could work.
+The tracking timeline demonstrates how a real order-tracking interface could work.
 
-🖼️ Product Images
+### 🖼️ Product Images
 
 Most product images come from the Fake Store API.
 
-Local images are also included for selected homepage, category and footwear content.
+Local images are included for selected homepage, category and footwear content.
 
-🎯 Learning Objectives
+---
+
+## 🎯 Learning Objectives
 
 This project helped practice:
 
-HTML5
-CSS3
-Responsive web design
-CSS Grid
-CSS Flexbox
-JavaScript ES6+
-DOM manipulation
-Event handling
-API integration
-Fetch API
-URL query parameters
-LocalStorage
-SessionStorage
-Form validation
-Client-side authentication concepts
-Shopping cart logic
-Wishlist functionality
-Order management
-Modular JavaScript
-Multi-page website architecture
-Responsive UI development
-📈 Project Status
-✅ Completed Learning Project
+- HTML5
+- CSS3
+- Responsive web design
+- CSS Grid
+- CSS Flexbox
+- JavaScript ES6+
+- DOM manipulation
+- Event handling
+- Fetch API
+- API integration
+- URL query parameters
+- LocalStorage
+- SessionStorage
+- Form validation
+- Client-side authentication concepts
+- Shopping cart logic
+- Wishlist functionality
+- Order management
+- Modular JavaScript
+- Multi-page website architecture
+- Responsive UI development
+
+---
+
+## 📈 Project Status
+
+### ✅ Completed Learning Project
 
 The project was developed through multiple implementation phases covering:
 
-Homepage
-Product catalog
-Product details
-Shopping cart
-Wishlist
-Authentication
-Checkout
-Order confirmation
-Order history
-Order tracking
-Responsive design
-UI improvements
-Deployment preparation
+- Homepage
+- Product catalog
+- Product details
+- Shopping cart
+- Wishlist
+- Authentication
+- Checkout
+- Order confirmation
+- Order history
+- Order tracking
+- Responsive design
+- UI improvements
+- Deployment preparation
 
-ShopEase is maintained as a portfolio and learning project rather than a production e-commerce application.
+ShopEase is maintained as a **portfolio and learning project** rather than a production e-commerce application.
 
-🔮 Future Improvements
+---
+
+## 📸 Screenshots
+
+Screenshots can be added here to showcase the main interfaces of the project.
+
+### 🏠 Homepage
+
+_Add screenshot here_
+
+### 🛍️ Product Catalog
+
+_Add screenshot here_
+
+### 📦 Product Details
+
+_Add screenshot here_
+
+### 🛒 Shopping Cart
+
+_Add screenshot here_
+
+### 💳 Checkout
+
+_Add screenshot here_
+
+### 📦 Orders & Tracking
+
+_Add screenshot here_
+
+---
+
+## 🔮 Future Improvements
 
 Possible improvements for a production-style version include:
 
-Backend API
-Real database
-Secure authentication
-JWT/session-based authorization
-Real payment gateway
-Server-side order management
-Real-time order tracking
-Product reviews
-Admin dashboard
-Inventory management
-Email notifications
-Cloud image storage
-👨‍💻 Author
-Amritpal Singh
+- Backend API
+- Real database
+- Secure authentication
+- JWT/session-based authorization
+- Real payment gateway
+- Server-side order management
+- Real-time order tracking
+- Product reviews
+- Admin dashboard
+- Inventory management
+- Email notifications
+- Cloud image storage
 
-Computer Science Engineering Student
-AI & ML Specialization
+---
+
+## 👨‍💻 Author
+
+### Amritpal Singh
+
+**Computer Science Engineering Student**  
+**AI & ML Specialization**
 
 Interested in:
 
-Web Development
-Artificial Intelligence
-Machine Learning
-Data Structures & Algorithms
-⭐ Project
+- Web Development
+- Artificial Intelligence
+- Machine Learning
+- Data Structures & Algorithms
 
-If you found this project useful or interesting, consider giving the repository a ⭐ on GitHub.
+---
 
-Built with ❤️ using HTML, CSS & Vanilla JavaScript.
+## ⭐ Support
+
+If you found this project useful or interesting, consider giving the repository a ⭐.
+
+**Built with ❤️ using HTML, CSS & Vanilla JavaScript.**
