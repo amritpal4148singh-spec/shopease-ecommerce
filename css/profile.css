@@ -1,0 +1,56 @@
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.profile-page {
+  padding: 40px 0 80px;
+}
+
+.profile-card {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 36px;
+}
+.profile-card h1 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.profile-field-static {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+.profile-field-label {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+.profile-field-value {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.profile-field-note {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin-top: 6px;
+}
+
+/* .form-field / .field-error base styles now live in css/forms.css. */
+.form-field { margin-bottom: 18px; }
+
+#profileForm .btn { width: 100%; margin-top: 4px; }
+
+.profile-logout-row {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+.profile-logout-row .btn { width: 100%; }
+
+@media (max-width: 560px) {
+  .profile-card { padding: 26px 20px; }
+}

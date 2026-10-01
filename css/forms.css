@@ -1,0 +1,67 @@
+/* =========================================================
+   SHARED FORM STYLES
+   Used by checkout.html, signup.html, login.html, and
+   profile.html. Extracted here during the Phase 7 cleanup
+   pass because these exact rules were duplicated near-
+   identically across all four pages' own stylesheets.
+   ========================================================= */
+
+.form-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.form-field input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+.form-field input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+}
+.form-field input.has-error {
+  border-color: #A5402F;
+}
+
+.field-error {
+  min-height: 1.1em;
+  margin-top: 5px;
+  font-size: 0.78rem;
+  color: #A5402F;
+}
+
+/* ---------------------------------------------------------
+   SHOW/HIDE PASSWORD (signup.html, login.html)
+   --------------------------------------------------------- */
+.password-field {
+  position: relative;
+  display: flex;
+}
+.password-field input {
+  padding-right: 44px;
+}
+.password-toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  color: var(--color-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+.password-toggle:hover { color: var(--color-ink); background: var(--color-border); }
+.password-toggle.is-active { color: var(--color-primary); }

@@ -1,0 +1,178 @@
+/* =========================================================
+   PRODUCTS PAGE
+   ========================================================= */
+
+.products-page {
+  padding: 40px 0 72px;
+}
+
+.products-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.products-heading h1 {
+  font-size: 1.9rem;
+}
+.result-count {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Hidden on desktop; shown as a real button only on narrow screens */
+.filter-toggle {
+  display: none;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 11px 16px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.products-body {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* ---------------------------------------------------------
+   FILTERS SIDEBAR
+   --------------------------------------------------------- */
+.filters-sidebar {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  position: sticky;
+  top: calc(var(--header-height) + 20px);
+}
+
+.filter-group + .filter-group {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.filter-group h3 {
+  font-size: 0.85rem;
+  text-transform: none;
+  color: var(--color-ink);
+  margin-bottom: 14px;
+}
+
+.filter-category-list li + li { margin-top: 2px; }
+.filter-pill {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 9px 10px;
+  border: none;
+  background: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  font-family: inherit;
+}
+.filter-pill:hover { background: var(--color-bg); color: var(--color-ink); }
+.filter-pill.is-active {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.price-inputs input {
+  width: 100%;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.88rem;
+  color: var(--color-ink);
+}
+.price-sep { color: var(--color-muted); }
+
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+.filter-buttons .btn {
+  flex: 1;
+  padding: 9px 10px;
+  font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------------
+   TOOLBAR (search + sort, above the grid)
+   --------------------------------------------------------- */
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.toolbar-search { flex: 1; min-width: 200px; }
+.toolbar-search input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.9rem;
+  background: var(--color-surface);
+}
+.toolbar-sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+.toolbar-sort select {
+  padding: 9px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.88rem;
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+.result-count { margin-bottom: 20px; }
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+@media (max-width: 900px) {
+  .filter-toggle { display: block; }
+
+  .products-body { grid-template-columns: 1fr; }
+
+  .filters-sidebar {
+    display: none;
+    position: static;
+  }
+  .filters-sidebar.is-open { display: block; }
+}
+
+@media (max-width: 560px) {
+  .toolbar { flex-direction: column; align-items: stretch; }
+  .toolbar-sort { justify-content: space-between; }
+}

@@ -1,0 +1,140 @@
+/* =========================================================
+   ORDER HISTORY PAGE
+   ========================================================= */
+
+.orders-page {
+  padding: 40px 0 72px;
+}
+
+.orders-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.orders-heading h1 { font-size: 1.9rem; }
+.orders-count {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.order-row {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.6fr 0.9fr 0.8fr 1fr auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-row-id {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+.order-row-date {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+}
+
+.order-row-label {
+  font-size: 0.72rem;
+  color: var(--color-muted);
+  margin-bottom: 3px;
+}
+.order-row-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------
+   STATUS BADGES
+   --------------------------------------------------------- */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.status-badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.status-placed { background: #EFF3EC; color: var(--color-primary); }
+.status-processing { background: #FCF1E1; color: #A5680F; }
+.status-shipped { background: #E7F0FB; color: #2A5FA0; }
+.status-out_for_delivery { background: #F1E9FB; color: #6A3FA0; }
+.status-delivered { background: #E9F5EC; color: #1F7A3D; }
+.status-cancelled { background: #FBEAE7; color: #A5402F; }
+
+.order-row-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.order-row-actions .btn {
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------
+   EMPTY STATE
+   --------------------------------------------------------- */
+.orders-empty {
+  text-align: center;
+  padding: 88px 20px;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.orders-empty svg {
+  margin: 0 auto 20px;
+  color: var(--color-border);
+}
+.orders-empty p {
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+@media (max-width: 860px) {
+  .order-row {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "id       id"
+      "items    payment"
+      "total    status"
+      "actions  actions";
+    row-gap: 12px;
+  }
+  .order-row-id-group { grid-area: id; }
+  .order-row-items { grid-area: items; }
+  .order-row-payment { grid-area: payment; }
+  .order-row-total { grid-area: total; }
+  .order-row-status { grid-area: status; }
+  .order-row-actions { grid-area: actions; justify-content: flex-start; }
+  .order-row-actions .btn { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .order-row { padding: 16px; }
+}
